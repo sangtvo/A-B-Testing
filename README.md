@@ -1,5 +1,5 @@
 # A-B Testing on Web Forms
-> Analyzing A/B test results using Python.
+> Analyzing A/B test results on web form reduction using Python.
 
 Table of Contents
 ---
@@ -8,8 +8,7 @@ Table of Contents
 3. [Tech Stack](#tech-stack)
 4. [Data Wrangling/Cleaning](#data-wranglingcleaning)
 5. [Exploratory Data Analysis](#exploratory-data-analysis)
-6. [A/B Testing](#k-nearest-neighbors-knn)
-    * [Hypothesis Testing](#)
+6. [A/B Testing](#ab-testing)
 7. [Solution](#solution)
 8. [Key Takeaways](#key-takeaways)
 
@@ -18,21 +17,26 @@ Table of Contents
 <a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#tech-stack"/>
 <a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#data-wranglingcleaning"/>
 <a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#exploratory-data-analysis"/>
-<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#k-nearest-neighbors-knn"/>
-<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#logistic-regression"/>
-<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#random-forest"/>
-<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#solution"/>
-<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#key-takeaways"/>
+<a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#ab-testing"/>
+<a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#solution"/>
+<a name="https://github.com/sangtvo/A-B-Testing-on-Web-Forms#key-takeaways"/>
+
 
 General Information
 ---
-The capstone project is part of a graduate course in order to graduate at Western Governor's University. A completion of a capstone prospectus, executive summary, and a power point presentation is required to graduate, but will not be uploaded to my repository. 
-
-**To expand the project even further (originally binary logistic regression), KNN and random forest analysis are added.**
+A case study demonstrating the value of testing forms and whether or not, a shorter form will increase or decrease conversion rates.
 
 Summary
 ---
-The winning model is the **random forest** algorithm with an overall accuracy of 84.50% and precision of 87.43%. This means that the model will correctly predict hotel cancellation 84.50% of the time. In order for hotel management company to reduce their current hotel cancellation rate of ~37%, management should focus on requiring deposits because 80% of the data require no deposits. This can be mitigated if hotels require fees for cancellation or mandatory deposits. When hotels have stricter cancellation policies, guests are less inclined to cancel their reservation and hotel revenue will increase. In addition, lead time is another factor to be targeted. Guests who hold reservations for long periods of time are more likley to cancel. If management offers special offers or larger discount for on-site services when booking in advance, guests are less likely to cancel. 
+This study failed to reject the null hypothesis. The hypothesis test is not statistically significant and are unable to provide enough evidence for the alternative hypothesis. The research in question is whether or not there is evidence that the probability of a 3-field form (treatment) increase or decrease conversion rate compared to a 5-field form (control).
+
+- **Null hypothesis**: The control and experiment groups have the same probability of completing the form.
+- **Alternative hypothesis**: The control and experiment groups have a different probability of completing the form.
+
+There are limitations that cause this case study to fail to reject the null hypothesis.
+* It did not meet required the sample size of 38,958
+* The control and treatment groups are not split correctly, 76.52% vs. 23.48%.
+
 
 Tech Stack
 ---
@@ -143,7 +147,6 @@ Relative difference of conversion rate: 1.47%
 
 A/B Testing
 ---
-## Hypothesis Testing
 Research question: Is there evidence that the probability of a 3-field form increase or decrease conversion rate compared to a 5-field form?
 
 - **Null hypothesis**: The control and experiment groups have the same probability of completing the form.
