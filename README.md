@@ -1,4 +1,4 @@
-# A-B Testing on Web Forms
+# A/B Testing on Web Forms
 > Analyzing A/B test results on web form reduction using Python.
 
 Table of Contents
