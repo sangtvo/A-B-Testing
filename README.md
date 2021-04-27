@@ -34,7 +34,7 @@ This study failed to reject the null hypothesis. The hypothesis test is not stat
 - **Alternative hypothesis**: The control and experiment groups have a different probability of completing the form.
 
 There are limitations that cause this case study to fail to reject the null hypothesis.
-* It did not meet required the sample size of 38,958
+* It did not meet required the sample size of 38,958.
 * The control and treatment groups are not split correctly, 76.52% vs. 23.48%.
 
 
@@ -108,7 +108,7 @@ else:
 There are NO duplicate prequal_id's.
 ```
 
-Checking counts
+Checking counts.
 ```python
 df['group'].value_counts()
 ```
